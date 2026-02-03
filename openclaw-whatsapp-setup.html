@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Set Up OpenClaw with WhatsApp: Complete 2026 Guide - llmtools.co</title>
+    <meta name="description" content="Step-by-step guide to installing OpenClaw and connecting it to WhatsApp. Turn your messaging app into a powerful AI assistant that can automate tasks.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="images/logo.svg" alt="LLM Tools" class="site-logo"></a></h1>
+        <p>The best guide to LLM tools and resources</p>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="top-10-llms-2024.html">Top 10 LLMs</a>
+                <a href="llm-how-to-guide.html">How to Use</a>
+                <a href="underrated-llms.html">Underrated LLMs</a>
+                <a href="openclaw-whatsapp-setup.html" class="active">OpenClaw Setup</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <span class="theme-label">Theme</span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <h1>How to Set Up OpenClaw with WhatsApp: Complete 2026 Guide</h1>
+        <p>OpenClaw has quickly become the most talked-about open-source AI project of 2026, amassing over 135,000 GitHub stars within weeks of its public release. Unlike traditional chatbots, OpenClaw doesn't just answer questions—it actually performs tasks on your behalf. This guide walks you through installing OpenClaw and connecting it to WhatsApp, transforming your favorite messaging app into a powerful AI assistant.</p>
+
+        <h2>What Makes OpenClaw Different?</h2>
+        <p>OpenClaw is a self-hosted AI agent that runs entirely on your own computer or server. Created by Peter Steinberger and originally released as Clawdbot in late 2025, the project underwent two name changes (first to Moltbot, then to OpenClaw) before settling on its current identity. What sets it apart from services like ChatGPT or Claude is its ability to take action rather than simply provide information.</p>
+        <p>When you tell OpenClaw to book a restaurant reservation, check your calendar, or organize files on your computer, it actually does those things. Because it runs locally and stays always-on, it can proactively message you with reminders, updates, and completed task notifications. The WhatsApp integration means you can control this AI assistant from anywhere using the messaging app already on your phone.</p>
+        <p>The downside is that OpenClaw requires some technical setup and ongoing costs for the underlying LLM API calls. This guide assumes basic comfort with command-line tools, though the installation wizard handles most complexity automatically.</p>
+
+        <h2>System Requirements</h2>
+        <p>Before diving into installation, make sure your system meets the minimum requirements. OpenClaw needs Node.js version 22 or higher—this is non-negotiable since the project relies on features introduced in recent Node releases.</p>
+        <p>For operating systems, macOS and Linux work natively without additional configuration. Windows users need to install WSL2 (Windows Subsystem for Linux) first, which adds an extra setup step but works well once configured. If you're running Windows, search for WSL installation instructions from Microsoft before proceeding.</p>
+        <p>You'll also need an API key from an LLM provider. OpenClaw works with multiple providers including Anthropic (Claude), OpenAI (GPT-4), and others. Most users choose Anthropic's Claude models for the best balance of capability and cost, though your choice depends on preference and budget.</p>
+
+        <h2>Installing OpenClaw</h2>
+        <p>The installation process uses a CLI wizard that guides you through each step. Open your terminal and run the following command to install OpenClaw globally:</p>
+        <pre><code>npm install -g openclaw@latest</code></pre>
+        <p>Once installed, launch the onboarding wizard with the daemon installation flag:</p>
+        <pre><code>openclaw onboard --install-daemon</code></pre>
+        <p>The wizard walks you through several configuration steps. First, it asks which LLM provider you want to use—enter your API key when prompted. Next, you'll configure the gateway (the core process that manages all OpenClaw operations) and workspace settings. Accept the defaults unless you have specific requirements.</p>
+        <p>The daemon installation ensures OpenClaw starts automatically when your computer boots and keeps running in the background. This persistent operation is essential for the always-on assistant experience that makes OpenClaw useful.</p>
+
+        <h2>Connecting WhatsApp</h2>
+        <p>With OpenClaw installed, the next step is linking your WhatsApp account. Run the channel login command:</p>
+        <pre><code>openclaw channels login</code></pre>
+        <p>Select WhatsApp from the list of available channels. The terminal displays a QR code—this is the same linking mechanism WhatsApp uses for its web and desktop clients. On your phone, open WhatsApp, go to Settings, then Linked Devices, and tap "Link a Device." Scan the QR code displayed in your terminal.</p>
+        <p>After successful linking, OpenClaw can send and receive messages through your WhatsApp account. The configuration is stored in your home directory at <code>~/.openclaw/openclaw.json</code>, with credentials saved separately in the credentials folder.</p>
+
+        <h2>Important WhatsApp Considerations</h2>
+        <p>WhatsApp requires a real mobile phone number—VoIP numbers and most virtual phone services won't work because WhatsApp blocks them during verification. If you're setting up OpenClaw for extended use, consider using a spare phone with a dedicated SIM or eSIM specifically for this purpose.</p>
+        <p>The recommended setup involves an old Android phone connected to Wi-Fi and power, running continuously as your OpenClaw's WhatsApp gateway. This approach keeps your primary phone's WhatsApp session separate and avoids potential conflicts. Using a separate number also provides a clean boundary between your personal messages and AI assistant interactions.</p>
+        <p>Keep in mind that OpenClaw's gateway process maintains exclusive ownership of the WhatsApp Web session. Running multiple instances or reconnecting from WhatsApp Web elsewhere will break the connection and require re-linking.</p>
+
+        <h2>Testing Your Setup</h2>
+        <p>With everything configured, test the connection by sending yourself a WhatsApp message. If OpenClaw is running correctly, you'll see the message appear in three places: your terminal output, the OpenClaw web dashboard (accessible at localhost:3000 by default), and your WhatsApp chat.</p>
+        <p>Try a simple command like asking OpenClaw about the weather or requesting a reminder. The response should appear in your WhatsApp within seconds. If responses don't appear, check that the daemon is running with <code>openclaw status</code> and verify your LLM API key is valid.</p>
+        <p>Common issues include QR code expiration (it times out after about a minute, so scan quickly), firewall blocking the connection, or incorrect API credentials. The OpenClaw logs, visible in the terminal or via <code>openclaw logs</code>, usually reveal the specific problem.</p>
+
+        <h2>Adding Skills and Extending Functionality</h2>
+        <p>OpenClaw becomes more powerful when you add skills—plugins that give it new capabilities. The built-in skill registry includes over 50 default skills, and the community-maintained ClawHub offers hundreds more covering everything from smart home control to fitness tracking.</p>
+        <p>Browse and install skills through the web dashboard's Skills section, or use the command line. Popular additions include calendar integrations, email management, file organization tools, and browser automation. Each skill extends what you can request through your WhatsApp messages.</p>
+        <p>The Model Context Protocol (MCP) integration allows OpenClaw to interface with over 100 third-party services. If a skill doesn't exist for your specific use case, the MCP framework often provides a path to add that functionality.</p>
+
+        <h2>Cost Expectations and Optimization</h2>
+        <p>OpenClaw's costs come primarily from LLM API usage. Because it runs continuously and maintains memory of past interactions, it consumes more API calls than typical chat sessions. Early users reported costs around $30 per month for moderate automation tasks, though this varies significantly based on usage patterns and model choice.</p>
+        <p>Using Claude Opus 4.5 as the default model proved expensive for some users—roughly $1 per hour even when idle. Switching to Claude Sonnet or configuring aggressive idle timeouts reduces costs substantially. The settings allow you to choose different models for different task types, optimizing the cost-capability tradeoff.</p>
+        <p>Monitor your API provider dashboard regularly during the first few weeks to understand your specific usage patterns and adjust OpenClaw's configuration accordingly.</p>
+
+        <h2>Security Best Practices</h2>
+        <p>Running an AI agent with access to your computer and messaging apps requires thoughtful security practices. OpenClaw stores credentials locally, so protect your machine with strong authentication and keep the software updated.</p>
+        <p>Be cautious about which skills you install—the open ecosystem means not every skill undergoes rigorous security review. Security researchers have identified vulnerabilities in some community skills, so stick to well-maintained, popular options and review permissions before installation.</p>
+        <p>Consider running OpenClaw in an isolated environment if you're connecting it to sensitive accounts. A dedicated virtual machine or container provides an additional security boundary. Avoid connecting production systems or accounts containing critical credentials during your initial experimentation period.</p>
+
+        <h2>Troubleshooting Common Issues</h2>
+        <p>If WhatsApp login fails with a "status=515 Unknown Stream Errored" message, the fix is usually simple: go to Settings in the web UI and click Update. This refreshes the connection and typically resolves stream errors.</p>
+        <p>Connection drops overnight often indicate network configuration issues. Ensure your router doesn't aggressively close idle connections, and consider using a keep-alive setting if available. The dedicated phone approach mentioned earlier helps avoid these problems since the connection stays active through the phone's persistent WhatsApp client.</p>
+        <p>For persistent issues, the OpenClaw GitHub repository's Issues section and Discord community provide active support. The project moves quickly, so solutions often exist for common problems—searching before posting usually surfaces relevant threads.</p>
+
+        <h2>Next Steps</h2>
+        <p>With OpenClaw running on WhatsApp, you've joined the leading edge of personal AI assistants. Start with simple tasks—setting reminders, checking information, organizing notes—and gradually expand to more complex automation as you learn the system's capabilities and quirks.</p>
+        <p>Explore the skills ecosystem to find integrations matching your workflow. Many users discover their most valuable use cases after experimenting with various skills and building personalized automation routines. The community continues expanding OpenClaw's capabilities rapidly, so check back regularly for new additions.</p>
+        <p><em>Looking to compare OpenClaw with other AI assistants? Check out our <a href="openclaw-vs-chatgpt.html">OpenClaw vs ChatGPT comparison</a> to understand how it stacks up against the competition.</em></p>
+    </main>
+    <footer>
+        <p>llmtools.co - Helping you find the right LLM tools</p>
+        <p><small>Affiliate links may earn us commission at no extra cost to you</small></p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+            updateLogo();
+        }
+
+        function updateThemeIcon(theme) {
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            if (theme === 'light') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        }
+
+        function updateLogo() {
+            const logo = document.querySelector('.site-logo');
+            if (!logo) return;
+            logo.src = document.documentElement.getAttribute('data-theme') === 'light'
+                ? 'images/logo-light.svg'
+                : 'images/logo.svg';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(theme);
+            updateLogo();
+        });
+    </script>
+</body>
+</html>

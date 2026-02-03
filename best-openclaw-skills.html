@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best OpenClaw Skills and MCP Integrations for 2026 - llmtools.co</title>
+    <meta name="description" content="Discover the most useful OpenClaw skills and MCP integrations. From productivity tools to smart home control, these extensions unlock OpenClaw's full potential.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="images/logo.svg" alt="LLM Tools" class="site-logo"></a></h1>
+        <p>The best guide to LLM tools and resources</p>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="top-10-llms-2024.html">Top 10 LLMs</a>
+                <a href="llm-how-to-guide.html">How to Use</a>
+                <a href="underrated-llms.html">Underrated LLMs</a>
+                <a href="best-openclaw-skills.html" class="active">OpenClaw Skills</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <span class="theme-label">Theme</span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <h1>Best OpenClaw Skills and MCP Integrations for 2026</h1>
+        <p>OpenClaw's power lies not just in its core capabilities but in its extensible architecture. With over 50 built-in skills, 700+ community contributions on ClawHub, and support for the Model Context Protocol (MCP) connecting 100+ third-party services, the possibilities expand far beyond basic chat. This guide covers the most valuable skills and integrations to install after getting OpenClaw running.</p>
+
+        <h2>Understanding OpenClaw's Extension System</h2>
+        <p>Before diving into specific recommendations, it helps to understand how OpenClaw's extension ecosystem works. The system supports four primary integration types: channels (messaging platform connections), tools (agent capabilities), providers (AI model inference), and memory backends (for persistent context).</p>
+        <p>Skills represent the most common extension type—self-contained packages that give OpenClaw new abilities. They follow the AgentSkills standard format developed by Anthropic and adopted across several AI coding assistants, which means skills developed for OpenClaw often work on compatible platforms and vice versa.</p>
+        <p>The Model Context Protocol (MCP) provides a different integration approach, enabling OpenClaw to communicate with external services through a standardized interface. MCP integrations tend to connect with existing APIs and services rather than adding entirely new local functionality.</p>
+        <p>Installing skills is straightforward through the web dashboard's Skills section or via command line. ClawHub at clawhub.ai serves as the official skill store, though GitHub repositories and npm packages also distribute skills. Always verify skill sources and review permissions before installation—the open ecosystem means quality and security vary.</p>
+
+        <h2>Productivity and Task Management</h2>
+        <p><strong>Calendar Integration</strong> stands among the most immediately useful skills. Once connected to Google Calendar, Outlook, or other calendar services, OpenClaw can check your schedule, create events, find free time slots, and send meeting invitations. The real power emerges when combining calendar awareness with other tasks—OpenClaw can automatically suggest meeting times when planning calls or warn you about scheduling conflicts.</p>
+        <p><strong>Email Management</strong> skills connect OpenClaw to Gmail, Outlook, or other email providers. Basic functionality includes reading recent messages, drafting replies, and organizing inbox folders. More advanced setups enable automatic categorization, priority flagging, and even draft responses waiting for your approval. Given the security sensitivity of email access, stick with well-maintained skills from trusted sources.</p>
+        <p><strong>Note-Taking Integrations</strong> bridge OpenClaw with services like Notion, Obsidian, and Evernote. These skills let you capture thoughts via messaging without switching contexts—tell OpenClaw to add something to your notes, and it appears in your preferred app. Some implementations support bidirectional sync, allowing OpenClaw to search and retrieve your existing notes when relevant.</p>
+        <p><strong>Task List Connections</strong> integrate with Todoist, Things, Asana, and similar tools. Create tasks conversationally, check due dates, mark items complete, and get proactive reminders about upcoming deadlines. The always-on nature of OpenClaw makes it particularly effective for task management since it can nudge you about neglected items without you having to remember to check.</p>
+
+        <h2>Developer Tools</h2>
+        <p><strong>Claude Code Skill</strong> brings agentic coding capabilities into OpenClaw through MCP integration. This popular skill enables sub-agent orchestration for complex programming tasks, state persistence across sessions, and context recovery when returning to projects. Developers use it to delegate coding subtasks while maintaining oversight through the OpenClaw interface.</p>
+        <p><strong>GitHub Integration</strong> connects OpenClaw to repository management. Check pull request status, create issues, review recent commits, and get notifications about CI/CD pipeline results. For developers working across multiple repositories, having this information accessible through messaging rather than constantly switching to GitHub proves valuable.</p>
+        <p><strong>DeepWiki Skill</strong> queries repository documentation through the DeepWiki MCP server. Point it at a GitHub repository, and OpenClaw can answer questions about the codebase, explain architectural decisions, and help onboard to unfamiliar projects. The skill effectively turns documentation into an interactive resource.</p>
+        <p><strong>Terminal Access Skills</strong> give OpenClaw the ability to execute shell commands on your system. This enables powerful automation—running builds, deploying code, managing servers—but also requires careful configuration to prevent unintended actions. Most implementations include confirmation steps and command whitelisting for safety.</p>
+
+        <h2>Communication and Messaging</h2>
+        <p><strong>Lark/Feishu Integration</strong> bridges OpenClaw with Lark messaging via webhook. Organizations using Lark for team communication can route OpenClaw interactions through their existing channels, enabling AI assistance within familiar workflows rather than requiring users to adopt new tools.</p>
+        <p><strong>Slack Connector</strong> skills bring OpenClaw into workspace communication. Summarize channel activity, draft messages, search conversation history, and respond to mentions. Teams using OpenClaw can create shared assistants accessible to multiple members through existing Slack channels.</p>
+        <p><strong>Multi-Channel Orchestration</strong> becomes possible when running OpenClaw across WhatsApp, Telegram, Discord, and other platforms simultaneously. The MCPorter skill helps manage multiple MCP servers and tools, enabling unified conversations that span platforms while maintaining context.</p>
+
+        <h2>Health and Personal Data</h2>
+        <p><strong>Garmin Connect Integration</strong> syncs fitness data including steps, heart rate, calories, workouts, and sleep patterns every five minutes. OpenClaw can answer questions about your activity levels, spot trends, and even correlate fitness data with other aspects of your schedule. Health-conscious users find value in having this information accessible conversationally.</p>
+        <p><strong>Finance Tracking Skills</strong> connect to budgeting apps and bank account aggregators. Check spending, categorize transactions, and get alerts about unusual activity. These skills require careful security consideration given the sensitivity of financial data—evaluate thoroughly before granting access.</p>
+        <p><strong>Journaling and Mood Tracking</strong> skills help capture daily reflections and emotional states through natural conversation. The low-friction nature of messaging-based input means users often maintain tracking habits more consistently than with dedicated apps requiring separate access.</p>
+
+        <h2>Smart Home and IoT</h2>
+        <p><strong>Home Assistant Integration</strong> connects OpenClaw to the popular open-source smart home platform. Control lights, thermostats, locks, and other devices through natural language commands sent via WhatsApp or other messaging channels. The combination of OpenClaw's always-on presence with Home Assistant's device network creates a powerful voice (or text) controlled home.</p>
+        <p><strong>IFTTT and Zapier Bridges</strong> extend OpenClaw's reach to thousands of services through automation platforms. While direct integrations often work better, these bridges provide quick connections to services without dedicated OpenClaw skills. Create applets triggered by OpenClaw actions or feed external events into your OpenClaw workflow.</p>
+        <p><strong>Media Control Skills</strong> manage Spotify, Plex, and other entertainment services. Queue songs, control playback, get recommendations, and manage playlists without leaving your messaging app. Some implementations include ambient awareness—OpenClaw can suggest music based on time of day or current activity.</p>
+
+        <h2>Information and Research</h2>
+        <p><strong>Web Search Integration</strong> enhances OpenClaw's ability to find current information. While the underlying LLM has knowledge cutoffs, search skills enable real-time information retrieval. Results feed into OpenClaw's context, allowing follow-up questions and deeper exploration of topics.</p>
+        <p><strong>News Aggregation Skills</strong> monitor RSS feeds, news sites, and topic-specific sources. Configure alerts for subjects you care about, get morning briefings summarizing overnight developments, or ask for updates on specific stories. The proactive notification capability means important news reaches you without constant manual checking.</p>
+        <p><strong>Research Assistant Skills</strong> help organize and annotate sources for deeper projects. Save articles, extract key points, track citations, and build knowledge bases around specific topics. Academics and analysts find these particularly valuable for managing information-heavy workflows.</p>
+
+        <h2>File and System Management</h2>
+        <p><strong>Document Processing Skills</strong> handle PDF extraction, Word document editing, spreadsheet manipulation, and format conversion. Ask OpenClaw to summarize a PDF, extract data from a spreadsheet, or convert between formats. The ability to process files through messaging removes friction from common document tasks.</p>
+        <p><strong>Backup and Sync Skills</strong> automate file management across local storage and cloud services. Schedule backups, sync folders between locations, and get alerts when sync issues occur. System administrators use these for hands-off maintenance of file systems.</p>
+        <p><strong>Screenshot and Screen Capture</strong> skills enable visual communication with OpenClaw. Send screenshots for analysis, capture specific windows, or record screen activity. Combined with vision-capable LLMs, these skills enable troubleshooting and feedback on visual content.</p>
+
+        <h2>Security Considerations</h2>
+        <p>The extensible nature of OpenClaw introduces supply chain risks worth taking seriously. Security researchers analyzing the ecosystem found vulnerabilities in approximately 26% of community skills examined. While this doesn't mean every skill is dangerous, it does mean careful evaluation matters.</p>
+        <p>Before installing any skill, check its source reputation, review recent updates, and understand what permissions it requires. Popular skills with active maintenance tend to be safer than abandoned projects. When possible, review the actual code—or trust assessments from security-focused community members who have.</p>
+        <p>Consider running OpenClaw in an isolated environment when connecting sensitive services. Container-based setups or dedicated virtual machines provide boundaries that limit potential damage from compromised skills. Avoid connecting production systems or accounts with sensitive credentials during initial experimentation.</p>
+
+        <h2>Finding and Installing Skills</h2>
+        <p>The primary discovery source is ClawHub at clawhub.ai, which organizes community skills by category and includes ratings and reviews. The web dashboard's Skills section provides a built-in browser for ClawHub content, making installation simple.</p>
+        <p>GitHub searches for "openclaw skill" or "moltbot skill" (the previous name) surface many additional options not listed on ClawHub. The awesome-openclaw-skills repository maintains a curated list of notable community contributions with brief descriptions.</p>
+        <p>Installation typically involves either clicking "Install" in the dashboard or running a command like <code>openclaw skill install skill-name</code>. After installation, most skills require configuration—API keys for connected services, preference settings, and permission grants. Follow each skill's documentation for setup specifics.</p>
+
+        <h2>Building Your Personal Stack</h2>
+        <p>The best OpenClaw setup depends entirely on your workflow and priorities. Start with skills addressing your most frequent tasks—for most users, that means calendar, email, and task management. Add capabilities incrementally as you identify friction points in your daily routine.</p>
+        <p>Avoid the temptation to install everything that looks interesting. Each skill adds complexity, potential security surface, and sometimes cost through additional API calls. A focused set of well-configured skills typically outperforms a sprawling collection of barely-used options.</p>
+        <p>As the ecosystem matures, expect consolidation around quality solutions and deprecated alternatives fading away. Keep your skill set updated, remove unused installations, and stay aware of security advisories affecting your chosen extensions.</p>
+        <p><em>New to OpenClaw? Start with our <a href="openclaw-whatsapp-setup.html">WhatsApp setup guide</a> or read our <a href="openclaw-vs-chatgpt.html">comparison with ChatGPT</a> to understand how OpenClaw fits into your AI toolkit.</em></p>
+    </main>
+    <footer>
+        <p>llmtools.co - Helping you find the right LLM tools</p>
+        <p><small>Affiliate links may earn us commission at no extra cost to you</small></p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+            updateLogo();
+        }
+
+        function updateThemeIcon(theme) {
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            if (theme === 'light') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        }
+
+        function updateLogo() {
+            const logo = document.querySelector('.site-logo');
+            if (!logo) return;
+            logo.src = document.documentElement.getAttribute('data-theme') === 'light'
+                ? 'images/logo-light.svg'
+                : 'images/logo.svg';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(theme);
+            updateLogo();
+        });
+    </script>
+</body>
+</html>

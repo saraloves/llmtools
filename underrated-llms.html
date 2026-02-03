@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underrated LLMs You Should Know - llmtools.co</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Default to dark mode
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="images/logo.svg" alt="LLM Tools" class="site-logo"></a></h1>
+        <p>The best guide to LLM tools and resources</p>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="top-10-llms-2024.html">Top 10 LLMs</a>
+                <a href="llm-how-to-guide.html">How to Use</a>
+                <a href="underrated-llms.html" class="active">Underrated LLMs</a>
+                <a href="openclaw-whatsapp-setup.html">OpenClaw</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <span class="theme-label">Theme</span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <h1>10 Underrated LLMs Worth Trying Beyond ChatGPT and Claude</h1>
+        <p>Let's be honest: if you're like most people, your LLM journey probably goes like this. You heard about ChatGPT, gave it a try, maybe switched to Claude when someone told you it was "better at writing," and called it a day. But here's the thing—the AI landscape is exploding with incredible alternatives that most people haven't even discovered yet.</p>
+        <p>These underrated powerhouses deserve your attention. Some are completely free. Others run locally on your own machine. A few specialize in tasks that make the big names look ordinary. Let's dive into the hidden gems of the LLM world.</p>
+
+        <h2>1. Mistral AI (Le Chat)</h2>
+        <p><strong>What Makes It Unique:</strong> Paris-based Mistral AI burst onto the scene with models that compete with—and sometimes beat—OpenAI's offerings, all while maintaining a smaller footprint. Their chat interface, Le Chat, offers a clean, multilingual experience that feels refreshingly straightforward compared to the feature-bloated interfaces of bigger competitors.</p>
+        <p><strong>Who It's Best For:</strong> Multilingual users who need seamless switching between languages, European language speakers who want a homegrown alternative, and anyone tired of waiting in endless queues during peak hours.</p>
+        <p><strong>Standout Feature:</strong> Mistral offers genuinely free access to models like Mistral NeMo (open-sourced in partnership with NVIDIA), and Le Chat provides a generous free tier with a 32k token context window. Unlike many competitors, they haven't locked everything behind a paywall.</p>
+        <p><strong><a href="https://chat.mistral.ai/chat">Try Le Chat Free →</a></strong></p>
+        <p><em>Affiliate disclosure: we may earn a commission when you sign up through our links.</em></p>
+
+        <h2>2. Microsoft Phi-3</h2>
+        <p><strong>What Makes It Unique:</strong> Phi-3 is what happens when Microsoft takes a radically different approach to model design. These "small language models" pack surprisingly capable intelligence into tiny packages—Phi-3-mini has just 3.8 billion parameters yet outperforms models with 10x the size. It runs on your laptop, your phone, or anywhere else without cloud dependencies.</p>
+        <p><strong>Who It's Best For:</strong> Privacy-conscious users, developers building on-device AI, anyone tired of watching their data hop across servers, and budget-conscious projects that can't afford API costs.</p>
+        <p><strong>Standout Feature:</strong> The ability to run Phi-3 entirely offline. While ChatGPT and Claude require constant internet connectivity, Phi-3 can live on your local machine, processing everything locally. Your prompts never leave your device.</p>
+        <p><strong><a href="https://huggingface.co/microsoft/Phi-3-mini-4k-instruct">Explore Phi-3 on Hugging Face →</a></strong></p>
+
+        <h2>3. Yi-34B (01.AI)</h2>
+        <p><strong>What Makes It Unique:</strong> Built by Chinese AI startup 01.AI, Yi-34B achieved something remarkable—it ranked highest among ALL open-source models on the Hugging Face Open LLM Leaderboard, outperforming giants like Llama-70B and Falcon-180B. It consistently scores on par with GPT-3.5 across benchmarks while being completely open-source.</p>
+        <p><strong>Who It's Best For:</strong> Researchers, developers who need strong bilingual (English/Chinese) capabilities, and anyone looking for a truly capable open-source model without licensing headaches.</p>
+        <p><strong>Standout Feature:</strong> The Yi-34B-Chat model landed in second place on the AlpacaEval Leaderboard (behind GPT-4 Turbo) and actually outperformed GPT-4, Mixtral, and Claude on certain benchmarks. This isn't a "decent for being open-source" model—it's genuinely competitive with the best.</p>
+        <p><strong><a href="https://huggingface.co/01-ai/Yi-34B">Get Yi-34B on Hugging Face →</a></strong></p>
+
+        <h2>4. WizardCoder</h2>
+        <p><strong>What Makes It Unique:</strong> While everyone was hyping up ChatGPT's coding abilities, WizardCoder quietly became one of the best code-generating models on the planet. Built by fine-tuning CodeLlama and StarCoder using Evol-Instruct methodology, it surpasses Claude and Bard on code generation benchmarks like HumanEval and HumanEval+.</p>
+        <p><strong>Who It's Best For:</strong> Developers, programmers, and anyone whose primary use case is writing, debugging, or explaining code.</p>
+        <p><strong>Standout Feature:</strong> WizardCoder-33B-V1.1 achieves 79.9 pass@1 on HumanEval—that's the percentage of problems it solves correctly on the first try. For comparison, many commercial models struggle to hit 70%. And it's completely free and open-source.</p>
+        <p><strong><a href="https://huggingface.co/WizardLMTeam/WizardCoder-33B-V1.1">Download WizardCoder →</a></strong></p>
+
+        <h2>5. DeepSeek</h2>
+        <p><strong>What Makes It Unique:</strong> DeepSeek emerged as a formidable open-source alternative, particularly known for strong reasoning and coding capabilities. Their models have gained serious traction in developer communities for delivering Anthropic and OpenAI-level performance at a fraction of the cost—or completely free for certain use cases.</p>
+        <p><strong>Who It's Best For:</strong> Developers who want enterprise-grade coding assistance without enterprise-grade pricing, and anyone exploring reasoning-intensive tasks.</p>
+        <p><strong>Standout Feature:</strong> DeepSeek's open-source models rival closed-source giants in logical reasoning and mathematical problem-solving, all while being completely transparent about their architecture and training data.</p>
+        <p><strong><a href="https://deepseek.com">Access DeepSeek →</a></strong></p>
+
+        <h2>6. Hugging Face Ecosystem</h2>
+        <p><strong>What Makes It Unique:</strong> Hugging Face isn't a single model—it's an entire universe of open-source AI. With tens of thousands of models available, from tiny 1B parameter models that run on Raspberry Pis to massive 400B+ beasts, the selection is staggering. The platform has become the GitHub of machine learning.</p>
+        <p><strong>Who It's Best For:</strong> Tinkerers, researchers, developers building custom solutions, and anyone who wants to compare different models side-by-side.</p>
+        <p><strong>Standout Feature:</strong> The ability to test hundreds of models instantly through their Spaces platform. You can try specialized models for everything from medical text analysis to creative writing to legal documents—all in your browser, often for free.</p>
+        <p><strong><a href="https://huggingface.co/spaces">Explore Hugging Face →</a></strong></p>
+
+        <h2>7. Grok (xAI)</h2>
+        <p><strong>What Makes It Unique:</strong> Built by Elon Musk's xAI, Grok takes a deliberately different approach—it's designed to be "witty" and tackle questions that other AIs refuse to touch. While it's still maturing, Grok offers free access (in certain tiers) and integrates with X/Twitter for real-time information.</p>
+        <p><strong>Who It's Best For:</strong> Users who want uncensored, unfiltered responses, X/Twitter power users, and anyone curious about xAI's rapidly evolving technology.</p>
+        <p><strong>Standout Feature:</strong> Real-time access to X/Twitter data means Grok can discuss current events and trending topics with context that models trained on static datasets simply can't match.</p>
+        <p><strong><a href="https://x.com/i/grok">Try Grok Free →</a></strong></p>
+
+        <h2>8. Command R+ (Cohere)</h2>
+        <p><strong>What Makes It Unique:</strong> Cohere, founded by former Google AI researchers, built Command R+ specifically for enterprise RAG (Retrieval-Augmented Generation) workloads. While it might be overkill for casual users, for businesses building AI applications, it offers capabilities that generalist models can't match.</p>
+        <p><strong>Who It's Best For:</strong> Enterprises, developers building RAG pipelines, and organizations that need verifiable, sourced responses.</p>
+        <p><strong>Standout Feature:</strong> Enterprise-grade reliability with proper citation and source tracking—essential for businesses that need to know where their AI's answers come from.</p>
+        <p><strong><a href="https://cohere.com/command-r-plus">Explore Command R+ →</a></strong></p>
+
+        <h2>9. Gemma (Google)</h2>
+        <p><strong>What Makes It Unique:</strong> Google's Gemma models bring the company's AI research to the open-source world. Available in various sizes (including the impressively capable 27B parameter version), Gemma offers strong performance with the backing of Google's massive research infrastructure.</p>
+        <p><strong>Who It's Best For:</strong> Android developers, Google Cloud users, and anyone who wants Google's AI technology without being locked into their ecosystem.</p>
+        <p><strong>Standout Feature:</strong> Seamless integration with Google Cloud and Vertex AI, plus strong performance in a truly open-source package.</p>
+        <p><strong><a href="https://huggingface.co/google/gemma-2-27b-it">Get Gemma Models →</a></strong></p>
+
+        <h2>10. LocalAI</h2>
+        <p><strong>What Makes It Unique:</strong> LocalAI is exactly what it sounds like—a fully self-hosted, local alternative to OpenAI, Claude, and others. It runs on your own hardware, supports consumer-grade GPUs (or even CPUs), and can serve as a drop-in replacement for OpenAI's API.</p>
+        <p><strong>Who It's Best For:</strong> Privacy maximalists, organizations with strict data residency requirements, developers building offline-capable applications, and anyone tired of vendor lock-in.</p>
+        <p><strong>Standout Feature:</strong> Complete control over your AI infrastructure with no usage limits, no API costs after initial setup, and no data leaving your premises.</p>
+        <p><strong><a href="https://localai.io">Set Up LocalAI →</a></strong></p>
+
+        <h2>Why Bother With Alternatives?</h2>
+        <p>Here's the truth that the mainstream AI discourse ignores: the "best" LLM depends entirely on your use case. ChatGPT and Claude are fantastic generalists, but they're not optimized for your specific workflow. They're also not free (for meaningful usage), they require internet connectivity, and they collect your data.</p>
+        <p>The alternatives above offer something the giants can't: choice. Whether you need local processing for privacy, specialized coding capabilities, multilingual support, or just a fresh perspective, there's an underrated LLM waiting for you.</p>
+        <p>The AI revolution isn't just happening at OpenAI and Anthropic. It's happening in open-source communities, in startups worldwide, and on laptops everywhere. The only question is: are you going to explore beyond the obvious?</p>
+        <p><em>Want more LLM discoveries? Subscribe to our newsletter for weekly deep dives into underrated AI tools.</em></p>
+    </main>
+    <footer>
+        <p>llmtools.co - Helping you find the right LLM tools</p>
+        <p><small>Affiliate links may earn us commission at no extra cost to you</small></p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+            updateLogo();
+        }
+
+        function updateThemeIcon(theme) {
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            if (theme === 'light') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        }
+
+        function updateLogo() {
+            const logo = document.querySelector('.site-logo');
+            if (!logo) return;
+            logo.src = document.documentElement.getAttribute('data-theme') === 'light'
+                ? 'images/logo-light.svg'
+                : 'images/logo.svg';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(theme);
+            updateLogo();
+        });
+    </script>
+</body>
+</html>

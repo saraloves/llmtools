@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LLM Tools</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Prevent flash of wrong theme - default to dark
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="images/logo.svg" alt="LLM Tools" class="site-logo"></a></h1>
+        <p>The best guide to LLM tools and resources</p>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="top-10-llms-2024.html">Top 10 LLMs</a>
+                <a href="llm-how-to-guide.html">How to Use</a>
+                <a href="underrated-llms.html">Underrated LLMs</a>
+                <a href="openclaw-whatsapp-setup.html">OpenClaw</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <span class="theme-label">Theme</span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <h2>Welcome to llmtools.co</h2>
+        <p>Your comprehensive guide to finding the right LLM tools for your needs. Compare features, pricing, and capabilities of the best language models available.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3><a href="top-10-llms-2024.html">Top 10 LLMs 2024</a></h3>
+                <p>Our comprehensive ranking of the best large language models for different use cases.</p>
+            </div>
+            <div class="card">
+                <h3><a href="llm-how-to-guide.html">How to Use LLMs</a></h3>
+                <p>A beginner-friendly guide to getting started with AI language models.</p>
+            </div>
+            <div class="card">
+                <h3><a href="underrated-llms.html">Underrated LLMs</a></h3>
+                <p>Hidden gems that deserve more attention than they get.</p>
+            </div>
+            <div class="card">
+                <h3><a href="openclaw-whatsapp-setup.html">OpenClaw Setup Guide</a></h3>
+                <p>Complete tutorial to install OpenClaw and connect it to WhatsApp for AI automation.</p>
+            </div>
+            <div class="card">
+                <h3><a href="openclaw-vs-chatgpt.html">OpenClaw vs ChatGPT</a></h3>
+                <p>Comparing AI agents vs chatbots: which assistant approach is right for you?</p>
+            </div>
+            <div class="card">
+                <h3><a href="best-openclaw-skills.html">Best OpenClaw Skills</a></h3>
+                <p>Top skills and MCP integrations to unlock OpenClaw's full potential in 2026.</p>
+            </div>
+        </div>
+
+        <div class="affiliate-disclaimer">
+            <strong>Affiliate Disclosure:</strong> We may earn commissions from affiliate links at no extra cost to you. This helps support our research and content creation.
+        </div>
+
+        <h2>Why llmtools.co?</h2>
+        <p>We research and compare LLM tools so you don't have to. Whether you're a developer, content creator, or business owner, find the perfect AI tool for your needs.</p>
+    </main>
+    <footer>
+        <p>llmtools.co - Helping you find the right LLM tools</p>
+        <p><small>Affiliate links may earn us commission at no extra cost to you</small></p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+            updateLogo();
+        }
+
+        function updateThemeIcon(theme) {
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            if (theme === 'light') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        }
+
+        // Initialize icon and logo on page load
+        function updateLogo() {
+            const logo = document.querySelector('.site-logo');
+            if (!logo) return;
+            logo.src = document.documentElement.getAttribute('data-theme') === 'light'
+                ? 'images/logo-light.svg'
+                : 'images/logo.svg';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(theme);
+            updateLogo();
+        });
+    </script>
+</body>
+</html>
